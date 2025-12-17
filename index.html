@@ -635,3 +635,635 @@
 
 
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Haroon K.M — AI/ML Engineer</title>
+  <link rel="icon" type="image/png" href="https://github.com/haroontrailblazer/haroontrailblazer/blob/main/Project%20Pngs/IMG_20251114_192108~2.jpg?raw=true">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root{
+      --bg1:#07090b;
+      --bg2:#0b0f12;
+      --white:#eaf6ff;
+      --muted:#b6c9cf;
+      --purple:#8b5cf6;
+      --cyan:#00e5ff;
+      --glass:rgba(255,255,255,0.03);
+      --radius:18px;
+      --shadow:0 18px 40px rgba(2,6,11,0.7);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter, sans-serif;
+      background:
+        radial-gradient(900px at 10% 10%, rgba(139,92,246,0.08), transparent 18%),
+        radial-gradient(800px at 90% 90%, rgba(0,229,255,0.08), transparent 18%),
+        linear-gradient(180deg,var(--bg1),var(--bg2));
+      color:var(--white);
+      padding:28px 18px;
+    }
+
+    .container{max-width:1200px;margin:0 auto;}
+
+    .panel{
+      background:rgba(255,255,255,0.02);
+      border-radius:22px;
+      padding:28px;
+      border:1px solid rgba(255,255,255,0.03);
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .blob{
+      position:absolute;filter:blur(40px);pointer-events:none;
+    }
+    .blob.purple{
+      right:-160px;top:-160px;width:420px;height:420px;
+      background:radial-gradient(circle,rgba(139,92,246,0.22),transparent 40%);
+    }
+    .blob.cyan{
+      left:-160px;bottom:-160px;width:380px;height:380px;
+      background:radial-gradient(circle,rgba(0,229,255,0.22),transparent 40%);
+    }
+
+    .nav{display:flex;justify-content:space-between;align-items:center;}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{
+      width:56px;height:56px;border-radius:14px;
+      background:linear-gradient(135deg,var(--purple),var(--cyan));
+      display:flex;align-items:center;justify-content:center;
+      font-weight:800;color:#041018;
+    }
+    .brand h3{margin:0}
+    .brand p{margin:0;font-size:12px;color:var(--muted)}
+
+    .nav-links a{
+      color:var(--muted);text-decoration:none;font-weight:600;
+      padding:8px;border-radius:8px;font-size:13px;
+    }
+    .nav-links a:hover{color:var(--white);background:rgba(255,255,255,0.03)}
+
+    .hero{
+      display:grid;grid-template-columns:1fr 420px;
+      gap:28px;align-items:center;padding:8px;margin-top:20px;
+    }
+
+    .role-pill{
+      background:linear-gradient(90deg,rgba(139,92,246,0.12),rgba(0,229,255,0.12));
+      padding:8px 12px;border-radius:999px;
+      font-weight:700;font-size:13px;
+      border:1px solid rgba(255,255,255,0.04);
+    }
+
+    h1 {
+      font-size: 42px;
+      margin: 12px 0;
+    }
+
+    h1 span {
+      background: linear-gradient(90deg, var(--cyan), var(--purple));
+      
+      /* Standard property */
+      background-clip: text;
+      
+      /* WebKit support (Chrome, Safari, Edge) */
+      -webkit-background-clip: text;
+
+      color: transparent;
+    }
+
+
+    .lead{color:var(--muted);margin-bottom:18px;max-width:680px}
+
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      padding:10px 14px;border-radius:12px;
+      font-weight:700;text-decoration:none;
+      background:linear-gradient(90deg,var(--cyan),var(--purple));
+      color:#041018;
+      border:none;
+      box-shadow:0 10px 30px rgba(0,0,0,0.6);
+    }
+    .btn.ghost{
+      background:transparent;color:var(--muted);
+      border:1px solid rgba(255,255,255,0.04)
+    }
+
+    .profile{
+      background:var(--glass);
+      border-radius:14px;padding:18px;
+      border:1px solid rgba(255,255,255,0.03);
+      display:flex;gap:14px;align-items:center;
+    }
+    .avatar{
+      width:120px;height:120px;border-radius:12px;overflow:hidden;
+      background:#0a1318;border:2px solid rgba(255,255,255,0.04);
+    }
+    .avatar img{width:100%;height:100%;object-fit:cover}
+
+    /* SECTIONS */
+    .section{margin-top:40px}
+    .title{font-size:20px;margin-bottom:12px;font-weight:700}
+    .subtitle{color:var(--muted);font-size:14px;margin-top:-6px}
+
+    .projects{
+      display:grid;gap:18px;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    }
+    .card{
+      background:var(--glass);
+      padding:14px;border-radius:12px;
+      border:1px solid rgba(255,255,255,0.04);
+      box-shadow:0 10px 30px rgba(0,0,0,0.6);
+      transition:.3s;
+    }
+    .card:hover{transform:translateY(-8px);}
+
+    .thumb{
+      height:140px;border-radius:8px;
+      background:#0a1218;border:1px solid rgba(255,255,255,0.04);
+      display:flex;align-items:center;justify-content:center;
+      color:var(--muted);margin-bottom:10px;
+    }
+
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .tag{
+      padding:6px 8px;border-radius:8px;
+      background:rgba(255,255,255,0.02);
+      border:1px solid rgba(255,255,255,0.04);
+      font-size:12px;color:var(--muted);font-weight:600;
+    }
+
+    .skills{display:flex;gap:10px;flex-wrap:wrap}
+    .skill{
+      padding:10px 14px;border-radius:999px;
+      background:linear-gradient(90deg,
+        rgba(139,92,246,0.08),
+        rgba(0,229,255,0.08)
+      );
+      border:1px solid rgba(255,255,255,0.04);
+      font-weight:700;font-size:13px;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 280px;
+      gap:18px;
+    }
+
+    .contact-card{
+      background:var(--glass);
+      padding:18px;border-radius:12px;
+      border:1px solid rgba(255,255,255,0.04);
+    }
+    .contact-linkss {
+        display: flex;
+        flex-direction: row;   /* horizontal layout */
+        gap: 12px;             /* space between icons */
+        align-items:center;
+    }
+    .contact-linkss a{
+      display:block;margin:6px 0;text-decoration:none;
+      color:var(--muted);padding:8px;
+      border-radius:8px;border:1px solid rgba(255,255,255,0.03);
+    }
+    .contact-linkss a:hover{background:rgba(255,255,255,0.03);color:var(--white)}
+
+    .contact-links a{
+      display:block;margin:6px 0;text-decoration:none;
+      color:var(--muted);padding:8px;
+      border-radius:8px;border:1px solid rgba(255,255,255,0.03);
+    }
+    .contact-links a:hover{background:rgba(255,255,255,0.03);color:var(--white)}
+    
+    .icon-link:hover i {
+      color: var(--cyan);
+      transform: scale(1.2);
+      transition: 0.2s;
+    }
+
+    .experience-list {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .exp-card {
+        background: var(--glass);
+        padding: 18px;
+        border-radius: 12px;
+        border: 1px solid rgba(255,255,255,0.04);
+        box-shadow: var(--shadow);
+    }
+
+    .exp-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-style: italic;
+    }
+
+    .exp-duration {
+        color: var(--muted);
+        font-size: 13px;
+        font-style: italic;
+    }
+
+    .exp-company {
+        color: var(--cyan);
+        font-size: 12px;
+        margin: 4px 0;
+        font-weight: 600;
+        font-style: italic;
+    }
+
+    .exp-desc {
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .mini-certs {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 10px;
+        font-size: 12px;
+        color: var(--muted);
+        line-height: 1.4;
+    }
+
+    .mini-certs li::before {
+        content: "✔ ";
+        color: #753ece;
+        font-weight: bold;
+    }
+
+    footer{margin-top:40px;text-align:center;color:var(--muted);font-size:13px}
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+    }
+    /* -------------------------------
+      FULL MOBILE OPTIMIZATION
+   ------------------------------- */
+
+    @media (max-width: 768px) {
+
+      body {
+        padding: 16px;
+      }
+
+      .panel {
+        padding: 20px;
+        border-radius: 18px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .profile {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .profile-info h4 {
+        font-size: 16px;
+      }
+
+      .avatar {
+        width: 100px;
+        height: 100px;
+      }
+
+      h1 {
+        font-size: 30px;
+        line-height: 1.2;
+      }
+
+      .cta {
+        justify-content: center;
+      }
+
+      .lead {
+        text-align: center;
+        font-size: 14px;
+        padding: 0 6px;
+      }
+
+      /* Project cards */
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 12px;
+      }
+
+      .thumb {
+        height: 160px;
+      }
+
+      /* Skills section */
+      .skills {
+        justify-content: center;
+      }
+
+      .skill {
+        font-size: 12px;
+        padding: 8px 12px;
+      }
+
+      /* Experience */
+      .exp-card {
+        padding: 14px;
+      }
+
+      .exp-header strong {
+        font-size: 15px;
+      }
+
+      .exp-duration {
+        font-size: 12px;
+      }
+
+      .exp-company {
+        text-align: center;
+        font-size: 12px;
+      }
+
+      /* Contact */
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card {
+        padding: 14px;
+      }
+
+      .contact-linkss {
+        justify-content: center;
+      }
+
+      .contact-linkss a {
+        font-size: 18px;
+      }
+
+      /* Footer */
+      footer {
+        font-size: 12px;
+        margin-bottom: 16px;
+      }
+    }
+
+    /* ultra small devices (iPhone SE, 320px width) */
+    @media (max-width: 360px) {
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .lead {
+        font-size: 13px;
+      }
+
+      .skill {
+        font-size: 11px;
+        padding: 6px 10px;
+      }
+
+      .avatar {
+        width: 90px;
+        height: 90px;
+      }
+
+      .card {
+        padding: 10px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="panel">
+
+    <div class="blob purple"></div>
+    <div class="blob cyan"></div>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <h1><span>Hi, I'm Haroon K.M</span></h1>
+        <p style="color:var(--muted);font-size:16px;font-style:Italic">[ AI/ML • Python • MLOps • Data Visualization ] .......@ haroontrailblazer</p>
+        <p class="lead">
+          I’m a pre-final year B.Tech student in Artificial Intelligence and Data Science at Anna University, passionate about AI, data science, and software development. I love building innovative solutions through coding and research, with hands-on experience in data analysis, machine learning, and problem-solving. I’m continuously learning and growing to create impactful tech solutions.
+        </p>
+
+        <div class="cta">
+          <a href="#experience" class="btn ghost">Experience</a>
+          <a href="https://github.com/haroontrailblazer" target="_blank" class="btn ghost">GitHub</a>
+          <a href="#" class="btn ghost" onclick="downloadCV()">Download CV</a>
+        </div>
+      </div>
+
+      <aside class="profile">
+        <div class="avatar">
+            <img id="avatarImg" src="https://github.com/haroontrailblazer/haroontrailblazer/blob/main/Project%20Pngs/IMG_20251114_192108~2.jpg?raw=true" alt="profile">
+        </div>
+
+        <div class="profile-info">
+            <h4 class="name">Muhammad Haroon Rasheed K.M</h4>
+
+            <ul class="mini-certs">
+                <li>Certified Power BI Analyst</li>
+                <li>Oracle Certified AI & ML Engineer</li>
+                <li>Cisco Certified Data Analyst</li>
+                <li>Cisco Certified Python Programmer</li>
+                <li>IBM Certified AI Professional</li>
+                <li>Google Certified Cybersecurity Professional</li>
+            </ul>
+        </div>
+      </aside>
+
+
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="title">Projects</div>
+
+      <div class="projects">
+        
+        <a href="https://strengthx.up.railway.app/" target="_blank" style="text-decoration:none; color:inherit;">
+        <div class="card">
+            <div class="thumb"><img src="https://github.com/haroontrailblazer/haroontrailblazer/blob/main/Project%20Pngs/IMG_20251111_225243.jpg?raw=true" alt="Thumbnail" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;"></div>
+            <div><strong>StrengthX</strong></div>
+            <p style="color:var(--muted)">Check your password is ever cracked & strengthn your password.</p>
+            <div class="tags">
+            <span class="tag">Python</span><span class="tag">Pwned-API</span><span class="tag">Ollama-API</span>
+            </div>
+        </div>
+        </a>
+
+         <a href="https://momentomonto.up.railway.app/" target="_blank" style="text-decoration:none; color:inherit;">
+        <div class="card">
+            <div class="thumb"><img src="https://github.com/haroontrailblazer/haroontrailblazer/blob/main/Project%20Pngs/mm.png?raw=true" alt="Thumbnail" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;"></div>
+            <div><strong>MomentoMonto</strong></div>
+            <p style="color:var(--muted)">Realtime server monitoring system with response time insights </p>
+            <div class="tags">
+            <span class="tag">Python</span><span class="tag">Network Analysis</span><span class="tag">KPI</span>
+            </div>
+        </div>
+        </a>
+
+
+         <a href="https://haroontrailblazer.github.io/PowerBi_Analysis/" target="_blank" style="text-decoration:none; color:inherit;">
+        <div class="card"><div class="thumb"><img src="https://github.com/haroontrailblazer/PowerBi_Analysis/blob/main/Screenshot%202025-12-04%20160547.png?raw=true" alt="Thumbnail" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;"></div>
+            
+            <div><strong>PowerBI Analysis</strong></div>
+            <p style="color:var(--muted)">Social media user engagement analysis Dashboard (Power BI).<br>@ Code From Basics.</p>
+            <div class="tags">
+            <span class="tag">PowerBI</span><span class="tag">DAX</span><span class="tag">KPI</span><span class="tag">EDA</span>
+            </div>
+        </div>
+        </a>
+
+
+      </div>
+    </section>
+
+    <br>
+    <section id="experience" class="section">
+    <div class="title">Experience</div>
+
+    <div class="experience-list">
+
+        <div class="exp-card">
+        <div class="exp-header">
+            <strong>Machine Learning Intern</strong>
+            <span class="exp-duration">Jul 2025 — Aug 2025</span>
+        </div>
+        <p class="exp-company">.... The Mind Company</p>
+        <p class="exp-desc">
+            Executed complete data preprocessing, feature engineering, and visual analysis workflows, and developed baseline ML models (Regression, Classification, KNN, Decision Trees, Random Forest, Naive Bayes) using Scikit-learn with robust cross-validation.
+        </p>
+        </div>
+
+        <div class="exp-card">
+        <div class="exp-header">
+            <strong>Data Analyst Intern</strong>
+            <span class="exp-duration">Oct 2024 — Jan 2025</span>
+        </div>
+        <p class="exp-company">.... Code from Basics, Chennai</p>
+        <p class="exp-desc">
+            Built an interactive Power BI dashboard to analyze user engagement across major social media platforms, designing KPIs, DAX measures, and trend visualizations to uncover insights on content performance, demographic patterns, and platform reach, demonstrating strong analytical thinking, dashboard design expertise, and the ability to translate raw data into actionable marketing insights.
+        </p>
+        </div>
+
+    </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="title">Skills & Tools</div>
+      <div class="skills">
+        <div class="skill">Python</div>
+        <div class="skill">TensorFlow</div>
+        <div class="skill">PyTorch</div>
+        <div class="skill">Scikit-learn</div>
+        <div class="skill">Machine Learning Algorithms</div>
+        <div class="skill">LLMs</div>
+        <div class="skill">Feature Engineering</div>
+
+        <div class="skill">Pandas</div>
+        <div class="skill">NumPy</div>
+        <div class="skill">SQL</div>
+        <div class="skill">MongoDB</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">Power BI</div>
+        <div class="skill">Tableau</div>
+        <div class="skill">EDA</div>
+        <div class="skill">Data Engineering</div>
+
+        <div class="skill">Streamlit</div>
+        <div class="skill">Docker</div>
+        <div class="skill">GitHub Actions</div>
+        <div class="skill">REST API</div>
+        <div class="skill">Data Pipelines</div>
+        <div class="skill">Model Deployment</div>
+        <div class="skill">Cloud Deployment</div>
+        <div class="skill">Model Registry</div>
+        <div class="skill">Experiment Tracking</div>
+      </div>
+    </section>
+    
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="title">Contact</div>
+
+      <div class="contact-grid">
+
+        <div class="contact-card">
+          <strong>Let's build togeather.</strong>
+          <p style="color:var(--muted);font-size:13px">
+            Reach out for projects & collaborations.
+          </p>
+          <div class="contact-links a">
+            <a href="mailto:haroonint144@gmail.com">Email: haroonint144@gmail.com</a>
+            <a href="tel:+919087116254">Phone: 9087116254</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <strong>Online profiles</strong>
+          <div class="contact-linkss">
+            <a href="https://github.com/haroontrailblazer" target="_blank" class="icon-link"><i class="fa-brands fa-github"></i></a>
+            <br><a href="https://www.linkedin.com/in/haroon-k-m144" target="_blank" class="icon-link"><i class="fa-brands fa-linkedin"></i></a>
+            <br><a href="https://www.instagram.com/haroontrailblazer" target="_blank" class="icon-link"><i class="fa-brands fa-instagram"></i></a>
+            <br><a href="https://www.credly.com/users/haroontrailblazer" target="_blank" class="icon-link"><i class="fa-solid fa-certificate"></i></a>
+
+        </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> haroontrailblazer •  
+    </footer>
+
+  </div>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  function downloadCV(){
+    const url = "https://1drv.ms/b/c/b87e213e29510289/IQDXGFUrBI14QKt7RRCZfIqcAb_cHUZ80JtZdw-V5nrOUUQ?e=fhkujd";
+    window.open(url, "_blank");
+  }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
