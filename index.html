@@ -119,13 +119,20 @@
     }
 
     @keyframes glowPulse {
-      100%   { box-shadow:0 0 18px rgb(255, 238, 0); }
-      100%  { box-shadow:0 0 18px rgb(246, 255, 0); }
-      100% { box-shadow:0 0 18px rgb(255, 251, 0); }
+      10%   { box-shadow:0 0 18px #dcf3f7; }
+      20%   { box-shadow:0 0 18px #f7f5dcdc; }
+      30%   { box-shadow:0 0 18px #f7f5dcc4; }
+      40%   { box-shadow:0 0 18px #f7f5dc97; }
+      50%   { box-shadow:0 0 18px #f7f5dc60; }
+      60%   { box-shadow:0 0 18px #f7f5dc4e; }
+      70%   { box-shadow:0 0 18px #f7f5dc3a; }
+      100%   { box-shadow:0 0 18px #f7f5dc2d; }
+      80%  { box-shadow:0 0 18px rgba(85, 64, 64, 0.125); }
+      100%  { box-shadow:0 0 18px rgb(0, 0, 0); }
     }
 
     .theme-toggle.pulse{
-      animation:glowPulse 0.9s ease;
+      animation:glowPulse 0.6s ease;
     }
 
     /* Light mode experience company text */
