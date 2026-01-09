@@ -135,7 +135,7 @@
 
     /* Light mode hero heading */
     .light h1 span{
-      background: linear-gradient(60deg, #11124f, #000000);
+      background: linear-gradient(60deg, var(--purple), #000000);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -198,8 +198,8 @@
     }
 
     h1 {
-      font-size: 42px;
-      margin: 12px 0;
+      font-size: 35px;
+      margin: 1px 0;
     }
 
     h1 span {
@@ -376,7 +376,7 @@
 
     .mini-certs li::before {
         content: "✔ ";
-        color: #808080d1;
+        color: var(--gray);
         font-weight: bold;
     }
 
@@ -534,7 +534,7 @@
 
 <div class="container">
   <div class="panel">
-    <div style="display:flex; justify-content:flex-end; margin-bottom:30px;">
+    <div style="display:flex; justify-content:flex-end; margin-bottom:0.1px;">
       <div class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
         <i class="fa-solid fa-moon"></i>
         <i class="fa-solid fa-sun"></i>
@@ -558,7 +558,8 @@
           <a href="#" class="btn ghost" onclick="downloadCV()">Download CV</a>
         </div>
       </div>
-
+      
+    
       <aside class="profile">
         <div class="avatar">
             <img id="avatarImg" src="Images/Haroon_K.M.jpg" alt="profile">
@@ -577,6 +578,7 @@
             </ul>
         </div>
       </aside>
+     
 
 
     </section>
