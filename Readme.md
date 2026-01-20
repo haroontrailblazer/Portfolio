@@ -1,5 +1,8 @@
 # Portfolio Website
 
+<img width="1581" height="976" alt="Screenshot 2026-01-20 113355" src="https://github.com/user-attachments/assets/3b65d947-e147-42a1-961d-ad7404c2e5a7" />
+
+
 This repository hosts the deployed source code of my personal portfolio website.
 
 The portfolio showcases my projects, technical skills, certifications, and analytics dashboards, with a focus on:
