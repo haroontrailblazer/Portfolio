@@ -1,5 +1,6 @@
-© 2026 Haroon K M. All rights reserved.
+All Rights Reserved.
 
-This repository is provided for viewing purposes only.
-No permission is granted to use, copy, modify, or distribute this code
-without explicit written permission from the author.
+Copyright (c) 2026 Haroon K M
+
+No part of this repository may be used, copied, modified, or distributed
+without prior written permission from the author.
