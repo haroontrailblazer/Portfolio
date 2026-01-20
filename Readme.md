@@ -14,3 +14,12 @@ The portfolio showcases my projects, technical skills, certifications, and analy
 The goal of this site is to provide a clear technical overview of my work for recruiters and collaborators.
 
 🔗 Live Site: https://haroontrailblazer.vercel.app
+
+---
+
+© 2026 Haroon K M. All rights reserved.
+
+This repository is provided for viewing purposes only.
+No permission is granted to use, copy, modify, or distribute this code
+without explicit written permission from the author.
+
