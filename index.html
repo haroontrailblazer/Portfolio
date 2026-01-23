@@ -858,7 +858,6 @@
             <a href="https://ollama.com/haroontrailblazer" target="_blank" class="icon-link" aria-label="Ollama Models"><i class="fa-solid fa-brain"></i></a>
             <a href="https://huggingface.co/haroontrailblazer" target="_blank" class="icon-link" aria-label="Hugging Face"><i class="fa-solid fa-face-smile"></i></a>
             <a href="https://www.credly.com/users/haroon-k-m" target="_blank" class="icon-link"><i class="fa-solid fa-certificate"></i></a>
-            <a href="https://calendar.app.google/o9NsAW3psZvqw4fz9" target="_blank" class="book-btn">Book a Meeting</a>
 
         </div>
 
@@ -868,6 +867,7 @@
     </section>
 
     <footer>
+      <a href="https://calendar.app.google/o9NsAW3psZvqw4fz9" target="_blank" alt="Let's Talk" class="icon-link"><i class="fa-solid fa-calendar-check" style="color:var(--muted)"></i></a><br><br>
       © <span id="year"></span> •  haroontrailblazer
     </footer>
 
@@ -929,20 +929,6 @@
   );
 
   faders.forEach(el => appearOnScroll.observe(el));
-</script>
-
-<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-<script>
-(function() {
-  window.addEventListener('load', function() {
-    calendar.schedulingButton.load({
-      url: 'YOUR_BOOKING_LINK',
-      color: '#7c3aed',
-      label: 'Book a Meeting',
-      target: document.getElementById('gc-btn'),
-    });
-  });
-})();
 </script>
 
 </body>
