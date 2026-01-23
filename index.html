@@ -256,6 +256,18 @@
       transition: 0.2s;
     }
 
+    .light .book-btn{
+      display:inline-block;
+      padding:4px 6px;
+      background:linear-gradient(90deg,var(--purple),var(--glass));
+      color:rgb(0, 0, 0);
+      text-decoration:wavy;
+      border-radius:10px;
+      font-weight:600;
+      font-size: 12px;
+      transition:0.3s ease;
+      margin-right: 7px;
+    }
 
     .lead{color:var(--muted);margin-bottom:18px;max-width:680px}
 
@@ -453,7 +465,30 @@
       transform:translateY(0);
     }
 
-    
+    .book-btn{
+      display:inline-block;
+      padding:4px 6px;
+      background:linear-gradient(90deg,var(--purple),var(--glass));
+      color:lavender;
+      text-decoration:wavy;
+      border-radius:10px;
+      font-weight:600;
+      font-size: 12px;
+      transition:0.3s ease;
+      margin-right: 7px;
+    }
+    .book-btn:hover{
+      background:var(--glass);
+      transform:translateY(-2px);
+      transition: ease 0.3s;
+    }
+
+    .book-btn:hover{background:linear-gradient(180deg,var(--glass),var(--purple));color:var(--white)}
+    .book-btn:hover i {
+      color: var(--cyan);
+      transform:translateY(-2px);
+      transition: ease-in-out 0.3s;
+    }
 
     footer{margin-top:40px;text-align:center;color:var(--muted);font-size:13px}
 
@@ -615,6 +650,8 @@
 <div class="container">
   <div class="panel">
     <div style="display:flex; justify-content:flex-end; margin-bottom:0.1px;">
+      <a href="https://calendar.app.google/o9NsAW3psZvqw4fz9" target="_blank" class="book-btn">Let's Talk</a>
+      <br>
       <div class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
         <i class="fa-solid fa-moon"></i>
         <i class="fa-solid fa-sun"></i>
@@ -821,6 +858,7 @@
             <a href="https://ollama.com/haroontrailblazer" target="_blank" class="icon-link" aria-label="Ollama Models"><i class="fa-solid fa-brain"></i></a>
             <a href="https://huggingface.co/haroontrailblazer" target="_blank" class="icon-link" aria-label="Hugging Face"><i class="fa-solid fa-face-smile"></i></a>
             <a href="https://www.credly.com/users/haroon-k-m" target="_blank" class="icon-link"><i class="fa-solid fa-certificate"></i></a>
+            <a href="https://calendar.app.google/o9NsAW3psZvqw4fz9" target="_blank" class="book-btn">Book a Meeting</a>
 
         </div>
 
@@ -893,7 +931,19 @@
   faders.forEach(el => appearOnScroll.observe(el));
 </script>
 
-
+<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+<script>
+(function() {
+  window.addEventListener('load', function() {
+    calendar.schedulingButton.load({
+      url: 'YOUR_BOOKING_LINK',
+      color: '#7c3aed',
+      label: 'Book a Meeting',
+      target: document.getElementById('gc-btn'),
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
