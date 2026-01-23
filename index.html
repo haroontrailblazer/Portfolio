@@ -233,11 +233,19 @@
     }
     .light .contact-links a:hover{background:rgba(255,255,255,0.03);color:var(--purple)}
 
+    .light .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .light .tag{
+      padding:6px 8px;border-radius:8px;
+      background:var(--glass);
+      border:1px solid var(--glass);
+      font-size:12px;color:var(--muted);font-weight:600;
+    }
+
     .light .go{
       margin-left: auto;
-      padding:6px 8px;border-radius:50%;
-      background:rgba(255,255,255,0.02);
-      border:1px solid rgba(255,255,255,0.04);
+      padding:6px 8px;border-radius:40%;
+      background:var(--glass);
+      border:1px solid var(--glass);
       font-size:12px;color:var(--muted);font-weight:600;
       transition: all 0.2s ease;
     }
@@ -247,6 +255,7 @@
       transform: scale(1.2);
       transition: 0.2s;
     }
+
 
     .lead{color:var(--muted);margin-bottom:18px;max-width:680px}
 
