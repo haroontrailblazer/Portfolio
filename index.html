@@ -233,6 +233,21 @@
     }
     .light .contact-links a:hover{background:rgba(255,255,255,0.03);color:var(--purple)}
 
+    .light .go{
+      margin-left: auto;
+      padding:6px 8px;border-radius:50%;
+      background:rgba(255,255,255,0.02);
+      border:1px solid rgba(255,255,255,0.04);
+      font-size:12px;color:var(--muted);font-weight:600;
+      transition: all 0.2s ease;
+    }
+    .light .go:hover{background:rgba(255,255,255,0.03);color:var(--purple)}
+    .light .go:hover i {
+      color: var(--purple);
+      transform: scale(1.2);
+      transition: 0.2s;
+    }
+
     .lead{color:var(--muted);margin-bottom:18px;max-width:680px}
 
     .cta{display:flex;gap:12px;flex-wrap:wrap}
@@ -292,6 +307,21 @@
       background:rgba(255,255,255,0.02);
       border:1px solid rgba(255,255,255,0.04);
       font-size:12px;color:var(--muted);font-weight:600;
+    }
+    .go{
+      margin-left: auto;
+      padding:6px 8px;border-radius:40%;
+      background:rgba(255,255,255,0.02);
+      border:1px solid rgba(255,255,255,0.04);
+      font-size:12px;color:var(--muted);font-weight:600;
+      transition: all 0.2s ease;
+    }
+
+    .go:hover{background:rgba(255,255,255,0.03);color:var(--cyan)}
+    .go:hover i {
+      color: var(--cyan);
+      transform: scale(1.2);
+      transition: 0.2s;
     }
 
     .skills{display:flex;gap:10px;flex-wrap:wrap}
@@ -628,7 +658,7 @@
             <div><strong>StrengthX</strong></div>
             <p style="color:var(--muted)">Check your password is ever cracked & strengthn your password.</p>
             <div class="tags">
-            <span class="tag">Python</span><span class="tag">Pwned-API</span><span class="tag">Ollama-API</span>
+            <span class="tag">Python</span><span class="tag">Pwned-API</span><span class="tag">Ollama-API</span><span class="go">➜</span>
             </div>
         </div>
         </a>
@@ -639,7 +669,7 @@
             <div><strong>MomentoMonto</strong></div>
             <p style="color:var(--muted)">Realtime server monitoring system with response time insights. </p>
             <div class="tags">
-            <span class="tag">Python</span><span class="tag">Network Analysis</span><span class="tag">KPI</span>
+            <span class="tag">Python</span><span class="tag">Network Analysis</span><span class="tag">KPI</span><span class="go">➜</span>
             </div>
         </div>
         </a>
@@ -651,7 +681,7 @@
             <div><strong>PowerBI Analysis</strong></div>
             <p style="color:var(--muted)">Social media user engagement analysis Dashboard (Power BI).<br></p>
             <div class="tags">
-            <span class="tag">PowerBI</span><span class="tag">DAX</span><span class="tag">KPI</span><span class="tag">EDA</span>
+            <span class="tag">PowerBI</span><span class="tag">DAX</span><span class="tag">KPI</span><span class="tag">EDA</span><span class="go">➜</span>
             </div>
         </div>
         </a>
