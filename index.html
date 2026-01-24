@@ -345,15 +345,89 @@
       transition: 0.2s;
     }
 
-    .skills{display:flex;gap:10px;flex-wrap:wrap}
+    /* ===== FILTER TABS ===== */
+
+    .skill-filters{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:center;
+      margin-bottom:20px;
+    }
+
+    .filter-btn{
+      padding:6px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.05);
+      border:0px solid rgba(255,255,255,0.1);
+      color:var(--muted);
+      font-size:12px;
+      cursor:pointer;
+      transition:0.25s ease;
+    }
+    .light .filter-btn{
+      padding:6px 14px;
+      border-radius:999px;
+      background:var(--glass);
+      border:0px solid rgba(255,255,255,0.1);
+      color:var(--muted);
+      font-size:12px;
+      cursor:pointer;
+      transition:0.25s ease;
+    }
+
+    .filter-btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 8px 20px rgba(0,229,255,0.705);
+    }
+
+    .filter-btn.active{
+      background:linear-gradient(90deg,rgba(0, 229, 255, 0.466),var(--glass));
+      color:var(--white);
+      border-color:transparent;
+    }
+
+    .light .filter-btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 8px 20px rgba(138, 92, 246, 0.705)
+    }
+    .light .filter-btn.active{
+      background:linear-gradient(90deg,rgba(138, 92, 246, 0.468),var(--glass));
+      color:#000;
+      border-color:transparent;
+    }
+
+    /* ===== SKILLS GRID ===== */
+    .skills{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content: center;
+      transition:0.25s ease;
+    }
+
     .skill{
-      padding:10px 14px;border-radius:999px;
+      padding:10px 14px;
+      border-radius:999px;
       background:linear-gradient(90deg,
-        rgba(139,92,246,0.08),
-        rgba(0,229,255,0.08)
+        rgba(139,92,246,0.12),
+        rgba(0,229,255,0.12)
       );
-      border:1px solid rgba(255,255,255,0.04);
-      font-weight:700;font-size:13px;
+      border:0px solid rgba(255,255,255,0.08);
+      font-weight:600;
+      font-size:13px;
+      white-space:nowrap;
+      transition:0.25s ease;
+    }
+
+    .skill:hover{
+      transform:translateY(-2px);
+      box-shadow:0 8px 20px rgba(0,229,255,0.705);
+    }
+
+    .light .skill:hover{
+      transform:translateY(-2px);
+      box-shadow:0 8px 20px rgba(138, 92, 246, 0.705);
     }
 
     .contact-grid{
@@ -406,6 +480,7 @@
         border-radius: 12px;
         border: 1px solid rgba(255,255,255,0.04);
         box-shadow: var(--shadow);
+        box-shadow:0 10px 20px rgba(0,0,0,0.6);
     }
 
     .exp-header {
@@ -537,7 +612,7 @@
       }
 
       .cta {
-        justify-content: left;
+        justify-content: center;
       }
 
       .lead {
@@ -560,6 +635,8 @@
       }
 
       /* Skills section */
+      /* ===== SKILLS SECTION ===== */
+
       .skills {
         justify-content: center;
       }
@@ -664,7 +741,7 @@
     <!-- HERO -->
     <section class="hero fade-up">
       <div>
-        <h1><span>Hi, I'm Haroon K.M</span></h1>
+        <h1 style="font-family: 'Poppins', sans-serif;"><span>Hi, I'm Haroon K.M</span></h1>
         <p style="color:var(--muted);font-size:16px;font-style:Italic">AI Developer | ML • Python • MLOps • Data Visualization | @ haroontrailblazer</p>
         <p class="lead">
           Pre-final year B.Tech student in Artificial Intelligence and Data Science at Anna University, focused on building production ready machine learning systems and data driven applications. Experienced in data analysis, model development, and deploying ML workflows, with a strong interest in Agentic AI and secure AI systems.
@@ -702,7 +779,7 @@
 
     <!-- PROJECTS -->
     <section id="projects" class="section">
-      <div class="title fade-up">Projects</div>
+      <div class="title fade-up" style="font-family: 'Poppins', sans-serif;">Projects</div>
 
       <div class="projects">
         
@@ -745,7 +822,7 @@
 
     <br>
     <section id="experience" class="section">
-    <div class="title fade-up">Experience</div>
+    <div class="title fade-up" style="font-family: 'Poppins', sans-serif;">Experience</div>
 
     <div class="experience-list">
 
@@ -787,53 +864,63 @@
 
     <!-- SKILLS -->
     <section id="skills" class="section">
-      <div class="title fade-up">Tech Stack</div>
+      <div class="title fade-up" style="font-family: 'Poppins', sans-serif;">Tech Stack</div>
+      <div class="skill-filters fade-up">
+       <button class="filter-btn active" data-filter="all">All</button>
+       <button class="filter-btn" data-filter="ai">AI / ML</button>
+       <button class="filter-btn" data-filter="data">Data</button>
+       <button class="filter-btn" data-filter="mlops">MLOps / Dev</button>
+     </div>
+
       <div class="skills">
-        <div class="skill fade-up">Python</div>
-        <div class="skill fade-up">TensorFlow</div>
-        <div class="skill fade-up">PyTorch</div>
-        <div class="skill fade-up">Scikit-learn</div>
-        <div class="skill fade-up">Machine Learning Algorithms</div>
-        <div class="skill fade-up">LangChain</div>
-        <div class="skill fade-up">LangGraph</div>
-        <div class="skill fade-up">Agentic-AI Orchestration</div>
-        <div class="skill fade-up">LLMs</div>
-        <div class="skill fade-up">Feature Engineering</div>
-        <div class="skill fade-up">LLM-Based Agents</div>
-        <div class="skill fade-up">AI Workflow Orchestration</div>
-        <div class="skill fade-up">Agentic AI Systems</div>
-        <div class="skill fade-up">Multi-Agent Architecture</div>
 
-        <div class="skill fade-up">Pandas</div>
-        <div class="skill fade-up">NumPy</div>
-        <div class="skill fade-up">SQL</div>
-        <div class="skill fade-up">MongoDB</div>
-        <div class="skill fade-up">MySQL</div>
-        <div class="skill fade-up">Power BI</div>
-        <div class="skill fade-up">Tableau</div>
-        <div class="skill fade-up">EDA</div>
-        <div class="skill fade-up">Data Engineering</div>
+        <div class="skill fade-up" data-cat="ai">Python</div>
+        <div class="skill fade-up" data-cat="ai">TensorFlow</div> 
+        <div class="skill fade-up" data-cat="ai">PyTorch</div> 
+        <div class="skill fade-up" data-cat="ai">Scikit-learn</div> 
+        <div class="skill fade-up" data-cat="ai">Machine Learning Algorithms</div> 
+        <div class="skill fade-up" data-cat="ai">LangChain</div> 
+        <div class="skill fade-up" data-cat="ai">LangGraph</div> 
+        <div class="skill fade-up" data-cat="ai">Agentic-AI Orchestration</div> 
+        <div class="skill fade-up" data-cat="ai">LLMs</div> 
+        <div class="skill fade-up" data-cat="ai">Feature Engineering</div> 
+        <div class="skill fade-up" data-cat="ai">LLM-Based Agents</div> 
+        <div class="skill fade-up" data-cat="ai">AI Workflow Orchestration</div> 
+        <div class="skill fade-up" data-cat="ai">Agentic AI Systems</div> 
+        <div class="skill fade-up" data-cat="ai">Multi-Agent Architecture</div>
 
-        <div class="skill fade-up">Streamlit</div>
-        <div class="skill fade-up">Docker</div>
-        <div class="skill fade-up">GitHub Actions</div>
-        <div class="skill fade-up">REST API</div>
-        <div class="skill fade-up">Data Pipelines</div>
-        <div class="skill fade-up">Model Deployment</div>
-        <div class="skill fade-up">Cloud Deployment</div>
-        <div class="skill fade-up">Model Registry</div>
-        <div class="skill fade-up">Experiment Tracking</div>
+        <div class="skill fade-up" data-cat="data">Pandas</div> 
+        <div class="skill fade-up" data-cat="data">NumPy</div> 
+        <div class="skill fade-up" data-cat="data">SQL</div> 
+        <div class="skill fade-up" data-cat="data">MongoDB</div> 
+        <div class="skill fade-up" data-cat="data">MySQL</div> 
+        <div class="skill fade-up" data-cat="data">Power BI</div> 
+        <div class="skill fade-up" data-cat="data">Tableau</div> 
+        <div class="skill fade-up" data-cat="data">EDA</div> 
+        <div class="skill fade-up" data-cat="data">Data Engineering</div>
+
+        <div class="skill fade-up" data-cat="mlops">Streamlit</div> 
+        <div class="skill fade-up" data-cat="mlops">Docker</div> 
+        <div class="skill fade-up" data-cat="mlops">GitHub Actions</div> 
+        <div class="skill fade-up" data-cat="mlops">REST API</div> 
+        <div class="skill fade-up" data-cat="mlops">Data Pipelines</div> 
+        <div class="skill fade-up" data-cat="mlops">Model Deployment</div> 
+        <div class="skill fade-up" data-cat="mlops">Cloud Deployment</div> 
+        <div class="skill fade-up" data-cat="mlops">Model Registry</div> 
+        <div class="skill fade-up" data-cat="mlops">Experiment Tracking</div>
+
       </div>
+
     </section>
     
     <!-- CONTACT -->
     <section id="contact" class="section">
-      <div class="title fade-up">Contact Me</div>
+      <div class="title fade-up" style="font-family: 'Poppins', sans-serif;">Contact Me</div>
 
       <div class="contact-grid fade-up">
 
         <div class="contact-card fade-up">
-          <strong>Let's Build Together.</strong>
+          <strong style="font-family: 'Poppins', sans-serif;">Let's Build Together.</strong>
           <p style="color:var(--muted);font-size:13px">
             Reach out for projects & collaborations.
           </p>
@@ -844,7 +931,7 @@
         </div>
 
         <div class="contact-card fade-up">
-          <strong>Developer Profiles</strong>
+          <strong style="font-family: 'Poppins', sans-serif;">Developer Profiles</strong>
           <div class="contact-linkss fade-up">
             <a href="https://github.com/haroontrailblazer" target="_blank" class="icon-link"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.linkedin.com/in/haroon-k-m144" target="_blank" class="icon-link"><i class="fa-brands fa-linkedin"></i></a>
@@ -929,6 +1016,28 @@
   );
 
   faders.forEach(el => appearOnScroll.observe(el));
+
+  const buttons = document.querySelectorAll(".filter-btn");
+  const skills = document.querySelectorAll(".skill");
+
+  buttons.forEach(btn=>{
+    btn.addEventListener("click",()=>{
+
+      buttons.forEach(b=>b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const filter = btn.dataset.filter;
+
+      skills.forEach(skill=>{
+        if(filter==="all" || skill.dataset.cat === filter){
+          skill.style.display = "inline-flex";
+        }else{
+          skill.style.display = "none";
+        }
+      });
+
+    });
+  });
 </script>
 
 </body>
