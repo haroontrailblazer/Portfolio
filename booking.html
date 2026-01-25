@@ -229,6 +229,10 @@
       background:transparent;color:var(--muted);
       border:1px solid rgba(255,255,255,0.04)
     }
+    
+    .gcal-embed{
+      height: 570px;
+    }
  
 
     footer{margin-top:40px;text-align:center;color:var(--muted);font-size:13px}
@@ -263,6 +267,10 @@
       .card {
         padding: 10px;
       }
+      
+      .gcal-embed{
+        height: 70px;
+      }
     }
 
   </style>
@@ -283,7 +291,12 @@
     <div class="blob cyan"></div>
 
     <!-- Google Calendar Appointment Scheduling begin -->
-    <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0rCfIvjpyHcedS528_Z-nymCOyuosBqO9bt5FzBgoKkU9NK8Hrc4wCTOCaMmqFvzkO4KF0YtdS?gv=true" style="border: 20" width="100%" height="570" frameborder="0"></iframe>
+    <iframe
+      class="gcal-embed"
+      src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0rCfIvjpyHcedS528_Z-nymCOyuosBqO9bt5FzBgoKkU9NK8Hrc4wCTOCaMmqFvzkO4KF0YtdS?gv=true"
+      style="border:0; width:100%;"
+      frameborder="0">
+    </iframe>
     <!-- end Google Calendar Appointment Scheduling -->
 
     <footer>
