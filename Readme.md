@@ -7,6 +7,7 @@ This repository hosts the deployed source code of my personal portfolio website.
 
 The portfolio showcases my projects, technical skills, certifications, and analytics dashboards, with a focus on:
 - AI & Machine Learning projects
+- Ai Automations with n8n
 - Data analysis using Python and SQL
 - Power BI dashboards and visual insights
 - End-to-end project documentation
