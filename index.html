@@ -7,6 +7,7 @@
   <link rel="icon" href="Images/hero-modified.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   
 
 
@@ -564,6 +565,114 @@
       transition: ease-in-out 0.3s;
     }
 
+    #loader {
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(900px at 10% 10%, rgba(139,92,246,0.08), transparent 18%),
+        radial-gradient(800px at 90% 90%, rgba(0,229,255,0.08), transparent 18%),
+        linear-gradient(180deg,var(--bg1),var(--bg2));
+      z-index: 9999;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      opacity: 1;
+      transition: opacity 0.8s ease, visibility 0.8s ease;
+      animation: breathe 3s ease-in-out infinite;
+    }
+
+    
+    @keyframes breathe {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+
+    /* AI Core loader */
+    .ai-core {
+      width: 80px;
+      height: 80px;
+      position: relative;
+    }
+
+    .ai-core span {
+      position: absolute;
+      inset: 0;
+      border: 2px solid transparent;
+      border-top-color: #51f9ff;
+      border-radius: 50%;
+      animation: spin 1.5s linear infinite;
+    }
+
+    .ai-core span:nth-child(2) {
+      border-top-color: #7c7cff;
+      animation-duration: 2.2s;
+    }
+
+    .ai-core span:nth-child(3) {
+      border-top-color: #ffffff;
+      animation-duration: 3s;
+    }
+
+    .light .ai-core span {
+      position: absolute;
+      inset: 0;
+      border: 2px solid transparent;
+      border-top-color: #1f6179;
+      border-radius: 50%;
+      animation: spin 1.5s linear infinite;
+    }
+
+    .light .ai-core span:nth-child(2) {
+      border-top-color: #7c7cff;
+      animation-duration: 2.2s;
+    }
+
+    .light .ai-core span:nth-child(3) {
+      border-top-color: #000000;
+      animation-duration: 3s;
+    }
+    
+    .ai-core span {
+      box-shadow: 0 0 12px rgba(81,249,255,0.6);
+      animation:
+        spin 1.5s linear infinite,
+        glow-dark 2s ease-in-out infinite;
+    }
+
+    @keyframes glow-dark {
+      0%, 100% { box-shadow: 0 0 8px rgba(81,249,255,0.4); }
+      50% { box-shadow: 0 0 18px rgba(81,249,255,0.9); }
+    }
+
+    .light .ai-core span {
+      box-shadow: 0 0 12px rgba(185, 81, 255, 0.6);
+      animation:
+        spin 1.5s linear infinite,
+        glow-light 2s ease-in-out infinite;
+    }
+
+    @keyframes glow-light {
+      0%, 100% { box-shadow: 0 0 8px rgba(194, 81, 255, 0.4); }
+      50% { box-shadow: 0 0 18px rgba(154, 81, 255, 0.9); }
+    }
+
+    .ai-core::after {
+      content: "";
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      border: 1px dashed rgba(81,249,255,0.4);
+      animation: spin 6s linear infinite reverse;
+    }
+
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+
     footer{margin-top:40px;text-align:center;color:var(--muted);font-size:13px}
 
     @media(max-width:900px){
@@ -722,7 +831,7 @@
   </style>
 </head>
 <body>
-
+<div id="loader"> <div class="ai-core"><span></span><span></span><span></span></div></span></div>
 <div class="container">
   <div class="panel">
     <div style="display:flex; justify-content:flex-end; margin-bottom:0.1px;">
@@ -1038,6 +1147,30 @@
     });
   });
 </script>
+
+<script>
+const hasVisited = localStorage.getItem("hasVisited");
+
+  // First visit: show loader
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+
+    setTimeout(() => {
+      loader.style.opacity = "0";
+      loader.style.visibility = "hidden";
+
+      sessionStorage.setItem("hasVisited", "true");
+    }, 1200); // loader duration
+  });
+
+  setTimeout(() => {
+    loader.style.transform = "scale(0.96)";
+    loader.style.opacity = "0";
+    loader.style.visibility = "hidden";
+    localStorage.setItem("hasVisited", "true");
+  }, 1200);
+</script>
+
 
 </body>
 </html>
